@@ -1,0 +1,23 @@
+{
+  "name": "DC Universe",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "dev_container",
+  "workspaceFolder": "/workspaces/dc-universe",
+  "containerUser": "node",
+  "containerEnv": {
+    "SHELL": "/bin/bash"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "forwardPorts": [4200, 3000, 3002, 8080, 5432],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}

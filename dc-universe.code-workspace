@@ -1,0 +1,50 @@
+{
+	"folders": [
+		{
+			"path": ".",
+      "name": "dc-universe"
+		},
+    {
+      "path": "packages/dc-universe-main-be",
+      "name": "dc-universe-main-be"
+    },
+    {
+      "path": "packages/dc-universe-main-api",
+      "name": "dc-universe-main-api"
+    },
+    {
+      "path": "packages/dc-universe-main-fe",
+      "name": "dc-universe-main-fe"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "**/packages": true
+    },
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#bf47d8",
+      "activityBar.background": "#bf47d8",
+      "activityBar.foreground": "#e7e7e7",
+      "activityBar.inactiveForeground": "#e7e7e799",
+      "activityBarBadge.background": "#d2b62d",
+      "activityBarBadge.foreground": "#15202b",
+      "commandCenter.border": "#e7e7e799",
+      "sash.hoverBorder": "#bf47d8",
+      "statusBar.background": "#a829c3",
+      "statusBar.foreground": "#e7e7e7",
+      "statusBarItem.hoverBackground": "#bf47d8",
+      "statusBarItem.remoteBackground": "#a829c3",
+      "statusBarItem.remoteForeground": "#e7e7e7",
+      "titleBar.activeBackground": "#a829c3",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#a829c399",
+      "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#a829c3"
+  }
+}

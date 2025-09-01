@@ -1,0 +1,48 @@
+services:
+  # dev_container:
+  #   build:
+  #     context: ./.devcontainer
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - .:/workspaces/dc-universe
+  #   networks:
+  #     - dc_universe_network
+  #   command: sleep infinity
+
+  # Database
+
+  postgres:
+    image: postgres:latest
+    container_name: dc_cont_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: dc-postgres-db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - dc_universe_network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: dc_cont_pgadmin
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    depends_on:
+      - postgres
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - dc_universe_network
+
+volumes:
+  postgres_data:
+  pgadmin_data:
+
+networks:
+  dc_universe_network:

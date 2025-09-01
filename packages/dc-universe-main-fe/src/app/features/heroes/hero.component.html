@@ -1,0 +1,9 @@
+@if (store.loading()) {
+  <div class="heroes-wrapper">
+    <app-loader></app-loader>
+  </div>
+} @else {
+  <h1>{{ title() | uppercase }}</h1>
+  <app-video-player></app-video-player>
+  <app-hero-list></app-hero-list>
+}
